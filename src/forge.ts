@@ -5,7 +5,7 @@ import path from "node:path";
 import os from "node:os";
 import { fileURLToPath } from "node:url";
 import pLimit from "p-limit";
-import { loadMaterials, loadSubjects, subjectsFromText, buildPrompt } from "./materials.ts";
+import { loadMaterials, loadSubjects, subjectsFromText, buildPrompt, normalizeBg, normalizeStyle, bgSlug } from "./materials.ts";
 import { generateImage, imageModelName } from "./gemini.ts";
 import { writeGrid } from "./viewer.ts";
 import type { ForgeJob, ForgeResult, Subject } from "./types.ts";
@@ -26,6 +26,8 @@ program
   .option("-t, --text <string>", "ad-hoc text mode: each character becomes a subject (e.g. 'xiang26')")
   .option("-m, --materials <list>", "comma-separated material names, 'featured', or 'all'", "featured")
   .option("-c, --concurrency <n>", "parallel requests", "3")
+  .option("--bg <color>", "background: 'cream' (default), 'dark', 'light', or hex '#RRGGBB'", "cream")
+  .option("--style <name>", "scene style: 'hero' (default, dramatic light + shadow) or 'icon' (uniform light, no shadow)", "hero")
   .option("--dry-run", "print prompts and counts, do not call API", false)
   .option("--label <text>", "label appended to run dir", "")
   .option("--max-cost <usd>", "refuse to run if estimated cost exceeds this (USD)", "2")
@@ -37,6 +39,8 @@ const opts = program.opts<{
   text?: string;
   materials: string;
   concurrency: string;
+  bg: string;
+  style: string;
   dryRun: boolean;
   label: string;
   maxCost: string;
@@ -51,6 +55,16 @@ if (!opts.subjects && !opts.text) {
 const materialFilter = opts.materials.split(",").map((s) => s.trim()).filter(Boolean);
 const concurrency = Math.max(1, parseInt(opts.concurrency, 10) || 3);
 const maxCostUsd = Math.max(0, parseFloat(opts.maxCost) || 0);
+
+let bg: string;
+let style: ReturnType<typeof normalizeStyle>;
+try {
+  bg = normalizeBg(opts.bg);
+  style = normalizeStyle(opts.style);
+} catch (err) {
+  console.error("\n  ✗", err instanceof Error ? err.message : err, "\n");
+  process.exit(2);
+}
 
 interface SpendLedger {
   total_usd: number;
@@ -104,7 +118,7 @@ async function main() {
   console.log(
     `\n  3d-icon-forge — ${materials.length} materials × ${subjects.length} subjects = ${imageCount} images`,
   );
-  console.log(`  estimated cost: $${estimatedUsd.toFixed(2)}   (lifetime spend on this machine: $${ledger.total_usd.toFixed(2)} / ${ledger.total_images} images)`);
+  console.log(`  bg: ${bg}   style: ${style}   estimated cost: $${estimatedUsd.toFixed(2)}   (lifetime spend on this machine: $${ledger.total_usd.toFixed(2)} / ${ledger.total_images} images)`);
   console.log(`  model: ${imageModelName()}   concurrency: ${concurrency}${opts.dryRun ? "   [DRY RUN]" : ""}\n`);
 
   if (!opts.dryRun && estimatedUsd > maxCostUsd && !opts.confirm) {
@@ -115,13 +129,15 @@ async function main() {
 
   const stamp = startedAt.toISOString().replace(/[:.]/g, "-").slice(0, 19);
   const labelTail = opts.label ? `-${slug(opts.label)}` : "";
-  const runDir = path.join(OUTPUT_DIR, `${stamp}-${slug(runLabel)}${labelTail}`);
+  const bgTail = bg === "cream" ? "" : `-bg-${bgSlug(bg)}`;
+  const styleTail = style === "hero" ? "" : `-${style}`;
+  const runDir = path.join(OUTPUT_DIR, `${stamp}-${slug(runLabel)}${styleTail}${bgTail}${labelTail}`);
 
   const jobs: ForgeJob[] = [];
   for (const m of materials) {
     for (const s of subjects) {
       const outPath = path.join(runDir, m.name, `${s.name}.png`);
-      jobs.push({ subject: s, material: m, outPath, prompt: buildPrompt(m, s) });
+      jobs.push({ subject: s, material: m, outPath, prompt: buildPrompt(m, s, bg, style) });
     }
   }
 
@@ -145,6 +161,8 @@ async function main() {
         startedAt: startedAt.toISOString(),
         model: imageModelName(),
         concurrency,
+        bg,
+        style,
         mode: opts.text ? "text" : "subjects",
         textInput: opts.text ?? null,
         materials: materials.map((m) => m.name),

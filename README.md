@@ -126,6 +126,50 @@ All 24 materials, each rendered on the letter `x` for a like-for-like comparison
 
 `ascii-art` overrides the shared cream backdrop with its own pure-black scene — it's intentionally NOT composable with the rest, useful as a standalone hero piece. `obsidian` keeps the shared cream backdrop and composes normally.
 
+## Scene modes — `--bg` and `--style`
+
+Two orthogonal flags control the scene around every material:
+
+- **`--bg`** — backdrop color. `cream` (default, composable), `dark`, `light`, or a hex like `#FFC1A8`.
+- **`--style`** — `hero` (default: dramatic light + shadow + environmental reflections) or `icon` (uniform diffuse light, no shadow, no dramatic reflections — for in-app system icons).
+
+The matrix below uses the same letter `x` × the same two materials, so you can see how the scene reshapes the rendering — especially for **reflective materials**, whose highlights pick up the backdrop color.
+
+### Matte material (`clay`) — shadow & light direction shift per scene
+
+<table>
+  <tr>
+    <td align="center"><img src="examples/modes/clay-hero-cream.png" width="130"/><br/><sub><code>hero × cream</code></sub></td>
+    <td align="center"><img src="examples/modes/clay-hero-dark.png" width="130"/><br/><sub><code>hero × dark</code></sub></td>
+    <td align="center"><img src="examples/modes/clay-hero-coral.png" width="130"/><br/><sub><code>hero × #FFC1A8</code></sub></td>
+    <td align="center"><img src="examples/modes/clay-icon-cream.png" width="130"/><br/><sub><code>icon × cream</code></sub></td>
+  </tr>
+</table>
+
+### Reflective material (`liquid-chrome`) — environment reflects in the surface
+
+<table>
+  <tr>
+    <td align="center"><img src="examples/modes/chrome-hero-cream.png" width="130"/><br/><sub><code>hero × cream</code></sub></td>
+    <td align="center"><img src="examples/modes/chrome-hero-dark.png" width="130"/><br/><sub><code>hero × dark</code></sub></td>
+    <td align="center"><img src="examples/modes/chrome-hero-coral.png" width="130"/><br/><sub><code>hero × #FFC1A8</code></sub></td>
+    <td align="center"><img src="examples/modes/chrome-icon-cream.png" width="130"/><br/><sub><code>icon × cream</code></sub></td>
+  </tr>
+</table>
+
+The chrome on coral picks up coral highlights; the chrome on dark gets a cool cyan rim. That's the whole point of generating per-scene — reflective 3D pasted onto a mismatched backdrop reads as a sticker, not as a 3D object that lives there.
+
+### When to use which
+
+| Asset role | Recommended flags |
+|---|---|
+| Composable vibetext letters (banners you arrange in Figma) | `--style hero --bg cream` (default) |
+| Hero artwork on a known banner color | `--style hero --bg "#YOURHEX"` |
+| Hero artwork on a dark UI surface | `--style hero --bg dark` |
+| App system icon (small, used everywhere; runtime shadow) | `--style icon --bg cream` (or `light`) |
+
+Note: `--style icon` produces *no* shadow on purpose — add the drop-shadow at runtime via your design system so it adapts to dark/light mode and interaction states. Materials with their own background override (`ascii-art`, etc.) ignore `--bg`.
+
 ## Concepts
 
 ### Subjects = what to draw
@@ -188,6 +232,8 @@ npm run forge -- [options]
   -s, --subjects <name>       load subjects/<name>.yaml (or a path)
   -m, --materials <list>      'featured' (default), 'all', or comma list
   -c, --concurrency <n>       parallel requests (default 3)
+      --bg <color>            'cream' (default), 'dark', 'light', or hex '#RRGGBB'
+      --style <name>          'hero' (default, dramatic) or 'icon' (flat, no shadow)
       --max-cost <usd>        refuse if estimate exceeds this (default 2)
       --confirm               override the cost gate
       --dry-run               print prompts only, no API calls
