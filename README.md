@@ -12,7 +12,7 @@ Batch 3D icon & letter generator — powered by **Gemini 2.5 Flash Image** (nano
 ## What it does
 
 - Generates batches of 3D-rendered icons or letters via Gemini's nano-banana image model
-- **28 curated materials** (chrome, knit wool, moss-grass, glitter resin, chrome-rose-glass fusion, ASCII terminal art, …) — 16 tagged `featured` for the core vibetext set
+- **24 curated materials** (chrome, knit wool, moss-grass, glitter resin, chrome-rose-glass fusion, ASCII terminal art, …) — 16 tagged `featured` for the core vibetext set
 - All materials share a single cream/white studio backdrop, so outputs **drop straight into Figma and compose cleanly**
 - Built-in cost gate + spend ledger — you don't accidentally burn $50 on a typo
 
@@ -47,7 +47,7 @@ When the run finishes, an HTML contact-sheet is auto-generated and its path is p
 
 ## Material gallery
 
-All 28 materials, each rendered on the letter `x` for a like-for-like comparison. ⭐ marks the 16 `featured` materials that match the vibetext aesthetic (and that `--materials featured` selects by default).
+All 24 materials, each rendered on the letter `x` for a like-for-like comparison. ⭐ marks the 16 `featured` materials that match the vibetext aesthetic (and that `--materials featured` selects by default).
 
 ### Chrome & metal
 
@@ -118,19 +118,13 @@ All 28 materials, each rendered on the letter `x` for a like-for-like comparison
 
 <table>
   <tr>
-    <td align="center" width="160"><img src="examples/porcelain.png" width="140"/><br/><sub><code>porcelain</code></sub></td>
-    <td align="center" width="160"><img src="examples/neon-tube.png" width="140"/><br/><sub><code>neon-tube</code></sub></td>
-    <td align="center" width="160"><img src="examples/risograph.png" width="140"/><br/><sub><code>risograph</code></sub></td>
     <td align="center" width="160"><img src="examples/obsidian.png" width="140"/><br/><sub><code>obsidian</code></sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="examples/paper-craft.png" width="140"/><br/><sub><code>paper-craft</code></sub></td>
-    <td align="center"><img src="examples/ascii-art.png" width="140"/><br/><sub><code>ascii-art</code></sub></td>
+    <td align="center" width="160"><img src="examples/ascii-art.png" width="140"/><br/><sub><code>ascii-art</code></sub></td>
     <td></td><td></td>
   </tr>
 </table>
 
-`neon-tube`, `risograph`, and `ascii-art` override the shared cream backdrop with their own scene (dark wall for neon, paper texture for riso, pure black for ASCII) — they're intentionally NOT composable with the rest. Useful as standalone hero pieces.
+`ascii-art` overrides the shared cream backdrop with its own pure-black scene — it's intentionally NOT composable with the rest, useful as a standalone hero piece. `obsidian` keeps the shared cream backdrop and composes normally.
 
 ## Concepts
 
@@ -162,7 +156,7 @@ material: |
 negative: things to avoid, comma separated
 ```
 
-Special materials (`neon-tube`, `risograph`) override the shared cream backdrop via `lighting:` and `background:` overrides in their YAML.
+Special materials like `ascii-art` override the shared cream backdrop via `lighting:` and `background:` overrides in their YAML.
 
 ### Output
 
