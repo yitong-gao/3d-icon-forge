@@ -1,0 +1,11 @@
+name: shaggy-fur
+display: Shaggy Fur
+tags: [fabric, fuzzy, featured]
+material: |
+  covered in long shaggy faux-fur — thousands of individual raised fur fibers
+  catching the light, soft tufted texture standing up off the surface, dense
+  fluffy silhouette with a soft fuzzy edge, dusty lavender-grey tone with subtle
+  fiber-tip highlights, premium plush-toy feel, individual hair strands
+  resolvable.
+lighting: large soft top-left key light grazing across the fur fibers to create rim-lit fur strands, gentle ambient fill, soft contact shadow below
+negative: smooth, slick, glossy, flat, short fur, metallic

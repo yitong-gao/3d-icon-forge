@@ -1,0 +1,17 @@
+subjects:
+  - name: heart
+    description: a plump rounded heart shape, symmetrical, simple and iconic
+  - name: chat-bubble
+    description: a rounded speech / chat bubble with a single tail pointing down-left
+  - name: phone
+    description: a chunky rounded smartphone handset shape, simplified silhouette
+  - name: wallet
+    description: a rounded closed wallet shape, simple iconic silhouette
+  - name: lock
+    description: a classic padlock shape, body plus closed shackle on top, no keyhole detail
+  - name: bell
+    description: a classic bell shape with a small clapper visible, slightly rounded
+  - name: gift-box
+    description: a wrapped gift box with a clean tied bow on top
+  - name: shield
+    description: a classic rounded heraldic shield silhouette, no internal detail

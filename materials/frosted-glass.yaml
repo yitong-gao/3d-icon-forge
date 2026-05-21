@@ -1,0 +1,9 @@
+name: frosted-glass
+display: Frosted Glass
+tags: [glass, translucent, visionos]
+material: |
+  sculpted from frosted translucent glass — soft milky translucency with gentle
+  subsurface light scattering, edges catch a thin crisp rim highlight, interior
+  glows with diffused light, Apple visionOS / Liquid Glass aesthetic — soft,
+  premium, modern.
+negative: opaque, harsh reflections, plastic

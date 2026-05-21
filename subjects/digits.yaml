@@ -1,0 +1,11 @@
+subjects:
+  - { name: digit-0, description: 'the digit "0" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: digit-1, description: 'the digit "1" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: digit-2, description: 'the digit "2" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: digit-3, description: 'the digit "3" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: digit-4, description: 'the digit "4" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: digit-5, description: 'the digit "5" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: digit-6, description: 'the digit "6" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: digit-7, description: 'the digit "7" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: digit-8, description: 'the digit "8" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: digit-9, description: 'the digit "9" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }

@@ -1,0 +1,18 @@
+name: ascii-art
+display: ASCII Terminal Art
+tags: [retro, tech, special]
+material: |
+  rendered entirely as dense ASCII / terminal text art — the form is composed
+  exclusively of small white printed ASCII characters (letters, digits, dashes,
+  asterisks, slashes, pipes, hashes, dots) arranged in horizontal scanlines
+  like rows of terminal text. The character DENSITY creates the 3D shading:
+  highlighted areas are packed dense with bright characters, midtones thin
+  out to scattered characters, and shadow areas fade to near-empty black.
+  The characters subtly warp and bend along the form's curvature so the 3D
+  silhouette reads clearly even though every pixel is text. Slight CRT
+  scanline feel, soft white-on-black typewriter aesthetic, hacker / matrix /
+  generative-art vibe. No solid surfaces — the form exists purely as
+  arrangements of glowing white characters against pure black void.
+lighting: high-contrast self-lit characters — bright white text against pure black, the character density itself acts as the only shading
+background: pure deep black void background, no gradient, no texture, no contact shadow, the ASCII characters fade into the surrounding black at the silhouette edges
+negative: cream background, white background, solid surface, photoreal 3d material, glossy, soft pastel, colored characters, multiple colors, smooth gradients, painted texture

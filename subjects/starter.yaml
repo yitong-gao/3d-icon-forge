@@ -1,0 +1,17 @@
+subjects:
+  - name: heart
+    description: A plump rounded heart shape, symmetrical, simple and iconic
+  - name: star
+    description: A five-pointed star, classic proportions, slightly chunky
+  - name: bell
+    description: A classic bell shape with a little clapper visible, slightly rounded
+  - name: gift-box
+    description: A wrapped gift box with a clean tied bow on top
+  - name: lock
+    description: A classic padlock shape, body plus shackle on top, no keyhole detail
+  - name: lightning-bolt
+    description: A simple zig-zag lightning bolt, bold and angular
+  - name: music-note
+    description: A single quarter note with a clean stem and filled head
+  - name: cloud
+    description: A puffy rounded cloud, simple cartoon-style outline

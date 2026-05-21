@@ -1,0 +1,9 @@
+name: glass-crystal
+display: Crystal Glass
+tags: [glass, transparent]
+material: |
+  carved from optically clear crystal glass with faceted edges — strong refraction
+  bending the light inside the form, subtle prismatic dispersion along the edges,
+  crisp specular highlights, the internal volume is visible through the transparent
+  body, no internal inclusions.
+negative: cloudy, opaque, plastic

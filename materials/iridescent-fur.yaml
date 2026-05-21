@@ -1,0 +1,13 @@
+name: iridescent-fur
+display: Iridescent Pearl Fur
+tags: [fabric, fuzzy, iridescent, featured]
+material: |
+  covered in long flowing soft fur with a pearlescent iridescent sheen — each
+  fur strand has a pearl-like surface that shifts between pale pink, soft mint,
+  cream, lavender and faint cyan as the light catches it (like fluffy fur made
+  of liquid pearl). The fur is dense, soft, and somewhat wavy, with longer
+  flowing strands rather than short bristles, gathered in soft directional
+  flows like a brushed-out silken pelt. The whole form reads as a fluffy
+  pearlescent cloud with rim-lit iridescent fiber tips.
+lighting: large soft top-left key grazing across the fur fibers so each strand catches an iridescent shimmer, gentle ambient fill, soft contact shadow below
+negative: matte fur, single solid color, short bristles, fake plush plastic, harsh saturated color, opaque

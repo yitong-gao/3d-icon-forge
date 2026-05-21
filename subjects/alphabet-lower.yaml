@@ -1,0 +1,27 @@
+subjects:
+  - { name: lower-a, description: 'the lowercase letter "a" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-b, description: 'the lowercase letter "b" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-c, description: 'the lowercase letter "c" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-d, description: 'the lowercase letter "d" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-e, description: 'the lowercase letter "e" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-f, description: 'the lowercase letter "f" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-g, description: 'the lowercase letter "g" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-h, description: 'the lowercase letter "h" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-i, description: 'the lowercase letter "i" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-j, description: 'the lowercase letter "j" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-k, description: 'the lowercase letter "k" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-l, description: 'the lowercase letter "l" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-m, description: 'the lowercase letter "m" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-n, description: 'the lowercase letter "n" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-o, description: 'the lowercase letter "o" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-p, description: 'the lowercase letter "p" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-q, description: 'the lowercase letter "q" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-r, description: 'the lowercase letter "r" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-s, description: 'the lowercase letter "s" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-t, description: 'the lowercase letter "t" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-u, description: 'the lowercase letter "u" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-v, description: 'the lowercase letter "v" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-w, description: 'the lowercase letter "w" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-x, description: 'the lowercase letter "x" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-y, description: 'the lowercase letter "y" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
+  - { name: lower-z, description: 'the lowercase letter "z" as a 3D sculptural form, with classic geometric sans-serif proportions, thick chunky strokes' }
