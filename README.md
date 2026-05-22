@@ -12,7 +12,7 @@ Batch 3D icon & letter generator — powered by **Gemini 2.5 Flash Image** (nano
 ## What it does
 
 - Generates batches of 3D-rendered icons or letters via Gemini's nano-banana image model
-- **26 curated materials** (chrome, knit wool, moss-grass, glitter resin, chrome-rose-glass fusion, ASCII terminal art, pixel-confetti, chrome-led-glow tech disc, …) — 18 tagged `featured` for the core vibetext set
+- **30 curated materials** (chrome family, pearl/iridescent, glass/resin, fabric, natural, ASCII, pixel-confetti, chrome-led-glow tech disc with 4 sub-variants, …) — 22 tagged `featured` for the core vibetext set
 - All materials share a single cream/white studio backdrop, so outputs **drop straight into Figma and compose cleanly**
 - Built-in cost gate + spend ledger — you don't accidentally burn $50 on a typo
 
@@ -47,7 +47,7 @@ When the run finishes, an HTML contact-sheet is auto-generated and its path is p
 
 ## Material gallery
 
-All 26 materials, each rendered on the letter `x` for a like-for-like comparison. ⭐ marks the 18 `featured` materials that match the vibetext aesthetic (and that `--materials featured` selects by default).
+All 30 materials, each rendered on the letter `x` for a like-for-like comparison. ⭐ marks the 22 `featured` materials that match the vibetext aesthetic (and that `--materials featured` selects by default).
 
 ### Chrome & metal
 
@@ -62,6 +62,12 @@ All 26 materials, each rendered on the letter `x` for a like-for-like comparison
     <td align="center"><img src="examples/gold-chain.png" width="140"/><br/><sub>⭐ <code>gold-chain</code></sub></td>
     <td align="center"><img src="examples/liquid-gold.png" width="140"/><br/><sub><code>liquid-gold</code></sub></td>
     <td align="center"><img src="examples/chrome-led-glow.png" width="140"/><br/><sub>⭐ <code>chrome-led-glow</code></sub></td>
+    <td align="center"><img src="examples/chrome-led-tiered.png" width="140"/><br/><sub>⭐ <code>chrome-led-tiered</code></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="examples/chrome-led-knurled.png" width="140"/><br/><sub>⭐ <code>chrome-led-knurled</code></sub></td>
+    <td align="center"><img src="examples/chrome-led-brushed.png" width="140"/><br/><sub>⭐ <code>chrome-led-brushed</code></sub></td>
+    <td align="center"><img src="examples/chrome-led-screws.png" width="140"/><br/><sub>⭐ <code>chrome-led-screws</code></sub></td>
     <td></td>
   </tr>
 </table>
