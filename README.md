@@ -12,7 +12,7 @@ Batch 3D icon & letter generator — powered by **Gemini 2.5 Flash Image** (nano
 ## What it does
 
 - Generates batches of 3D-rendered icons or letters via Gemini's nano-banana image model
-- **24 curated materials** (chrome, knit wool, moss-grass, glitter resin, chrome-rose-glass fusion, ASCII terminal art, …) — 16 tagged `featured` for the core vibetext set
+- **26 curated materials** (chrome, knit wool, moss-grass, glitter resin, chrome-rose-glass fusion, ASCII terminal art, pixel-confetti, chrome-led-glow tech disc, …) — 18 tagged `featured` for the core vibetext set
 - All materials share a single cream/white studio backdrop, so outputs **drop straight into Figma and compose cleanly**
 - Built-in cost gate + spend ledger — you don't accidentally burn $50 on a typo
 
@@ -47,7 +47,7 @@ When the run finishes, an HTML contact-sheet is auto-generated and its path is p
 
 ## Material gallery
 
-All 24 materials, each rendered on the letter `x` for a like-for-like comparison. ⭐ marks the 16 `featured` materials that match the vibetext aesthetic (and that `--materials featured` selects by default).
+All 26 materials, each rendered on the letter `x` for a like-for-like comparison. ⭐ marks the 18 `featured` materials that match the vibetext aesthetic (and that `--materials featured` selects by default).
 
 ### Chrome & metal
 
@@ -61,7 +61,8 @@ All 24 materials, each rendered on the letter `x` for a like-for-like comparison
   <tr>
     <td align="center"><img src="examples/gold-chain.png" width="140"/><br/><sub>⭐ <code>gold-chain</code></sub></td>
     <td align="center"><img src="examples/liquid-gold.png" width="140"/><br/><sub><code>liquid-gold</code></sub></td>
-    <td></td><td></td>
+    <td align="center"><img src="examples/chrome-led-glow.png" width="140"/><br/><sub>⭐ <code>chrome-led-glow</code></sub></td>
+    <td></td>
   </tr>
 </table>
 
@@ -89,7 +90,7 @@ All 24 materials, each rendered on the letter `x` for a like-for-like comparison
     <td align="center"><img src="examples/glass-crystal.png" width="140"/><br/><sub><code>glass-crystal</code></sub></td>
     <td align="center"><img src="examples/frosted-glass.png" width="140"/><br/><sub><code>frosted-glass</code></sub></td>
     <td align="center"><img src="examples/soap-bubble.png" width="140"/><br/><sub><code>soap-bubble</code></sub></td>
-    <td></td>
+    <td align="center"><img src="examples/pixel-confetti.png" width="140"/><br/><sub>⭐ <code>pixel-confetti</code></sub></td>
   </tr>
 </table>
 
