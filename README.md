@@ -68,7 +68,6 @@ All 33 materials, each rendered on the letter `x` for a like-for-like comparison
     <td align="center"><img src="examples/chrome-led-knurled.png" width="140"/><br/><sub>⭐ <code>chrome-led-knurled</code></sub></td>
     <td align="center"><img src="examples/chrome-led-brushed.png" width="140"/><br/><sub>⭐ <code>chrome-led-brushed</code></sub></td>
     <td align="center"><img src="examples/chrome-led-screws.png" width="140"/><br/><sub>⭐ <code>chrome-led-screws</code></sub></td>
-    <td></td>
   </tr>
 </table>
 
@@ -83,7 +82,6 @@ All 33 materials, each rendered on the letter `x` for a like-for-like comparison
   </tr>
   <tr>
     <td align="center"><img src="examples/iridescent-fur.png" width="140"/><br/><sub>⭐ <code>iridescent-fur</code></sub></td>
-    <td></td><td></td><td></td>
   </tr>
 </table>
 
@@ -95,7 +93,6 @@ Middle East-coded pigment blocks. `lapis-pigment` is brand-color anchored (Botim
   <tr>
     <td align="center" width="160"><img src="examples/lapis-pigment.png" width="140"/><br/><sub>⭐ <code>lapis-pigment</code><br/>Persian ultramarine + gold pyrite</sub></td>
     <td align="center" width="160"><img src="examples/spice-pigment.png" width="140"/><br/><sub>⭐ <code>spice-pigment</code><br/>saffron / sumac / paprika</sub></td>
-    <td></td><td></td>
   </tr>
 </table>
 
@@ -123,7 +120,6 @@ Middle East-coded pigment blocks. `lapis-pigment` is brand-color anchored (Botim
     <td align="center" width="160"><img src="examples/knit-wool.png" width="140"/><br/><sub>⭐ <code>knit-wool</code></sub></td>
     <td align="center" width="160"><img src="examples/shaggy-fur.png" width="140"/><br/><sub>⭐ <code>shaggy-fur</code></sub></td>
     <td align="center" width="160"><img src="examples/plush.png" width="140"/><br/><sub><code>plush</code></sub></td>
-    <td></td>
   </tr>
 </table>
 
@@ -133,7 +129,6 @@ Middle East-coded pigment blocks. `lapis-pigment` is brand-color anchored (Botim
   <tr>
     <td align="center" width="160"><img src="examples/clay.png" width="140"/><br/><sub>⭐ <code>clay</code></sub></td>
     <td align="center" width="160"><img src="examples/moss-grass.png" width="140"/><br/><sub>⭐ <code>moss-grass</code></sub></td>
-    <td></td><td></td>
   </tr>
 </table>
 
@@ -143,7 +138,6 @@ Middle East-coded pigment blocks. `lapis-pigment` is brand-color anchored (Botim
   <tr>
     <td align="center" width="160"><img src="examples/obsidian.png" width="140"/><br/><sub><code>obsidian</code></sub></td>
     <td align="center" width="160"><img src="examples/ascii-art.png" width="140"/><br/><sub><code>ascii-art</code></sub></td>
-    <td></td><td></td>
   </tr>
 </table>
 
