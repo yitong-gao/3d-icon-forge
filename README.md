@@ -12,7 +12,7 @@ Batch 3D icon & letter generator — powered by **Gemini 2.5 Flash Image** (nano
 ## What it does
 
 - Generates batches of 3D-rendered icons or letters via Gemini's nano-banana image model
-- **35 curated materials** including a Middle East-coded Pattern & Heritage family (iznik stained glass, mashrabiya wood lattice, lapis lazuli + spice pigment blocks) plus chrome variants, pearl/iridescent, glass/resin, fabric, natural — 27 tagged `featured` for the core vibetext + cultural set
+- **33 curated materials** including a Middle East-coded Pigment family (lapis lazuli ultramarine + spice market) plus chrome variants, pearl/iridescent, glass/resin, fabric, natural — 25 tagged `featured` for the core vibetext + cultural set
 - All materials share a single cream/white studio backdrop, so outputs **drop straight into Figma and compose cleanly**
 - Built-in cost gate + spend ledger — you don't accidentally burn $50 on a typo
 
@@ -47,7 +47,7 @@ When the run finishes, an HTML contact-sheet is auto-generated and its path is p
 
 ## Material gallery
 
-All 35 materials, each rendered on the letter `x` for a like-for-like comparison. ⭐ marks the 27 `featured` materials that match the vibetext + cultural set (and that `--materials featured` selects by default).
+All 33 materials, each rendered on the letter `x` for a like-for-like comparison. ⭐ marks the 25 `featured` materials that match the vibetext + cultural set (and that `--materials featured` selects by default).
 
 ### Chrome & metal
 
@@ -87,16 +87,15 @@ All 35 materials, each rendered on the letter `x` for a like-for-like comparison
   </tr>
 </table>
 
-### Pattern & Heritage
+### Pigment & Heritage
 
-Middle East-coded materials. Brand-color anchored (Botim cobalt blue threaded through Iznik glass, lapis lazuli) + cultural craft references (Ottoman tilework, Persian illuminated manuscripts, mashrabiya architecture, spice market sensory).
+Middle East-coded pigment blocks. `lapis-pigment` is brand-color anchored (Botim cobalt blue, the legendary Persian ultramarine), `spice-pigment` is the warm color-clash counterpart (Middle Eastern spice market).
 
 <table>
   <tr>
-    <td align="center" width="160"><img src="examples/iznik-glass.png" width="140"/><br/><sub>⭐ <code>iznik-glass</code><br/>Ottoman stained glass</sub></td>
-    <td align="center" width="160"><img src="examples/mashrabiya.png" width="140"/><br/><sub>⭐ <code>mashrabiya</code><br/>wood lattice</sub></td>
-    <td align="center" width="160"><img src="examples/lapis-pigment.png" width="140"/><br/><sub>⭐ <code>lapis-pigment</code><br/>Persian ultramarine</sub></td>
-    <td align="center" width="160"><img src="examples/spice-pigment.png" width="140"/><br/><sub>⭐ <code>spice-pigment</code><br/>spice market</sub></td>
+    <td align="center" width="160"><img src="examples/lapis-pigment.png" width="140"/><br/><sub>⭐ <code>lapis-pigment</code><br/>Persian ultramarine + gold pyrite</sub></td>
+    <td align="center" width="160"><img src="examples/spice-pigment.png" width="140"/><br/><sub>⭐ <code>spice-pigment</code><br/>saffron / sumac / paprika</sub></td>
+    <td></td><td></td>
   </tr>
 </table>
 
