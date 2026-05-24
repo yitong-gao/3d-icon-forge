@@ -1,0 +1,24 @@
+name: blob-organic
+display: Organic Blobs
+tags: [featured]
+pattern: |
+  the surface is composed of LARGE OVERLAPPING 3D MATTE PEBBLE SHAPES
+  — soft rounded translucent volumes drifting and overlapping across
+  the frame like 3D rendered organic stones or amorphous water-droplet
+  forms seen from above. Each pebble has CLEAR ROUNDED 3D VOLUME with
+  visible soft shading (subtle highlight on one side, gentle falloff
+  to shadow on the other), giving each shape a distinct dimensional
+  presence. The pebbles have SOFT ROUNDED SILHOUETTES (not razor-sharp
+  outlines, but you can perceive each volume as a discrete 3D form),
+  varying in size from small (~15% of the frame) to large (~60%), and
+  they overlap with soft alpha-blend transparency creating subtle
+  deeper-tone zones where they intersect. The composition has a sense
+  of gentle depth and layering, like a modern fintech app hero
+  background or wellness-app onboarding screen.
+palette_hint: |
+  the palette colors are distributed across the blobs — some blobs in
+  the primary color, some in secondary/tertiary, with smooth tonal
+  variation within each blob. Adjacent overlapping blobs of different
+  colors blend at their intersection.
+texture: matte soft 3D rendering, subtle gradient shading on each blob, no harsh edges, no specular highlights — premium contemporary mobile-app aesthetic (think modern fintech / wellness / meditation app backgrounds)
+negative: hard sharp outlines, dark stroke borders, vector circles, flat 2D circles, glossy reflective spheres, mirror reflections, photographic realism, foreground icon or text, geometric perfect circles, plastic shiny surfaces

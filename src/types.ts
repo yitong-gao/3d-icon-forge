@@ -35,3 +35,35 @@ export interface ForgeResult {
   bytes?: number;
   ms?: number;
 }
+
+/** Background style for `--mode bg` — generates banner/hero backgrounds (no subject). */
+export interface BgStyle {
+  name: string;
+  display: string;
+  tags?: string[];
+  /** Description of the pattern itself (stripes / blobs / mesh / etc.). */
+  pattern: string;
+  /** Optional palette guidance — how the colors should flow (vertical / radial / etc.). */
+  palette_hint?: string;
+  /** Optional texture / depth hint. */
+  texture?: string;
+  /** Negative cues. */
+  negative?: string;
+}
+
+export interface BgJob {
+  style: BgStyle;
+  palette: string;
+  aspect: string;
+  mood: string;
+  outPath: string;
+  prompt: string;
+}
+
+export interface BgResult {
+  job: BgJob;
+  ok: boolean;
+  error?: string;
+  bytes?: number;
+  ms?: number;
+}

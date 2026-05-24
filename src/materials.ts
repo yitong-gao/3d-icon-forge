@@ -1,7 +1,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import YAML from "yaml";
-import type { Material, Subject, SubjectsFile } from "./types.ts";
+import type { Material, Subject, SubjectsFile, BgStyle } from "./types.ts";
 
 const SHARED_FRAMING = "centered composition, square 1:1 frame, the subject occupies ~58% of the canvas with generous breathing room on all sides. Premium product photography. Hyper-detailed 3D render, octane-quality, photoreal materials, crisp edges, no motion blur.";
 const SHARED_NEGATIVE = "text label, logo, watermark, signature, multiple objects, busy background, harsh shadows touching frame edge, low quality, blurry, distorted";
@@ -144,6 +144,81 @@ export function buildPrompt(material: Material, subject: Subject, bg: string = "
     `Lighting: ${lighting}.`,
     `Background: ${background}.`,
     `Framing: ${SHARED_FRAMING}`,
+    ``,
+    `Avoid: ${negative}.`,
+  ].join("\n").trim();
+}
+
+// ============================================================
+// Background mode (--mode bg) — generate banner/hero backgrounds
+// ============================================================
+
+const ASPECT_DESCRIPTIONS: Record<string, string> = {
+  "9:16": "vertical portrait 9:16 aspect ratio (tall mobile fullscreen banner / onboarding background, taller than wide)",
+  "16:9": "horizontal landscape 16:9 aspect ratio (wide hero banner / desktop website hero)",
+  "4:5": "vertical portrait 4:5 aspect ratio (Instagram-card / mobile feature card)",
+  "1:1": "square 1:1 aspect ratio (post / thumbnail)",
+  "3:4": "vertical portrait 3:4 aspect ratio (mobile card)",
+};
+
+export function normalizeAspect(a: string): string {
+  if (a in ASPECT_DESCRIPTIONS) return a;
+  throw new Error(`Invalid --aspect '${a}'. Use one of: ${Object.keys(ASPECT_DESCRIPTIONS).join(", ")}`);
+}
+
+export type Mood = "calm" | "energetic" | "dramatic" | "soft";
+
+export function normalizeMood(m: string): Mood {
+  if (m === "calm" || m === "energetic" || m === "dramatic" || m === "soft") return m;
+  throw new Error(`Invalid --mood '${m}'. Use 'calm', 'energetic', 'dramatic', or 'soft'.`);
+}
+
+function moodPhrase(m: Mood): string {
+  if (m === "calm") return "calm, restrained, soft saturation, low contrast, breathing room";
+  if (m === "energetic") return "vibrant, saturated, dynamic motion energy, higher contrast";
+  if (m === "dramatic") return "high contrast, deep darks meeting bright highlights, cinematic depth";
+  return "soft, dreamy, gentle low contrast, pastel-leaning saturation";
+}
+
+export async function loadBgStyles(dir: string, filter?: string[]): Promise<BgStyle[]> {
+  const files = (await readdir(dir)).filter((f) => f.endsWith(".yaml") || f.endsWith(".yml"));
+  const all: BgStyle[] = [];
+  for (const f of files) {
+    const raw = await readFile(path.join(dir, f), "utf8");
+    const s = YAML.parse(raw) as BgStyle;
+    if (!s?.name || !s?.pattern) {
+      throw new Error(`BgStyle ${f} missing required 'name' or 'pattern'`);
+    }
+    all.push(s);
+  }
+  all.sort((a, b) => a.name.localeCompare(b.name));
+  if (!filter || filter.length === 0 || filter.includes("all")) return all;
+  const set = new Set(filter);
+  const picked = all.filter((s) => set.has(s.name));
+  const missing = filter.filter((n) => n !== "all" && !all.some((s) => s.name === n));
+  if (missing.length) throw new Error(`Unknown bg-style(s): ${missing.join(", ")}`);
+  return picked;
+}
+
+const SHARED_BG_NEGATIVE = "text, letters, numbers, logo, watermark, signature, foreground objects, central subject, icon, person, face, hand, photographic realism of objects, harsh edges, choppy banding, low quality, blurry, distorted, 3d rendered object";
+
+export function buildBgPrompt(style: BgStyle, palette: string, aspect: string, mood: Mood): string {
+  const negative = [style.negative, SHARED_BG_NEGATIVE].filter(Boolean).join(", ");
+  const aspectDesc = ASPECT_DESCRIPTIONS[aspect] ?? aspect;
+  const moodDesc = moodPhrase(mood);
+
+  return [
+    `A full-bleed abstract atmospheric BACKGROUND image, ${aspectDesc}, designed as a mobile app banner / hero / onboarding background — the pattern fills the ENTIRE image edge to edge with NO central subject and NO foreground object.`,
+    ``,
+    `Pattern: ${style.pattern}`,
+    ``,
+    `Color palette: ${palette}.${style.palette_hint ? ` ${style.palette_hint}` : ""}`,
+    ``,
+    `Texture / depth: ${style.texture ?? "smooth modern digital rendering, premium app-design feel, no photographic noise, no grain"}`,
+    ``,
+    `Mood: ${moodDesc}.`,
+    ``,
+    `Critical: the image is a PURE BACKGROUND — NO text, NO icons, NO foreground objects, NO 3D rendered subjects. The entire surface is the abstract pattern flowing edge to edge, ready to overlay UI text / icons / buttons on top in a design tool.`,
     ``,
     `Avoid: ${negative}.`,
   ].join("\n").trim();
