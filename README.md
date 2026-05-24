@@ -145,37 +145,6 @@ Middle East-coded materials. Brand-color anchored (Botim cobalt blue threaded th
 
 `ascii-art` overrides the shared cream backdrop with its own pure-black scene — it's intentionally NOT composable with the rest, useful as a standalone hero piece. `obsidian` keeps the shared cream backdrop and composes normally.
 
-## Banner Background mode (`--mode bg`)
-
-In addition to 3D icons, forge can generate **abstract banner backgrounds** — full-bleed atmospheric images for onboarding, hero sections, promo cards. No subject, just pattern × palette × aspect ratio. Post-processing crops to the exact target aspect (9:16 / 16:9 / 4:5 / 3:4 / 1:1).
-
-<p align="center">
-  <img src="examples/bg/gradient-stripes.png" width="120" alt="gradient stripes"/>
-  <img src="examples/bg/mesh-flow.png" width="120" alt="mesh flow"/>
-  <img src="examples/bg/blob-organic.png" width="120" alt="organic 3D blobs"/>
-</p>
-
-```bash
-# Vertical 9:16 onboarding background with Botim brand palette
-npm run forge -- --mode bg --bg-style mesh-flow --palette "#011FE5,#FFC1A8,white" --aspect 9:16
-
-# All 3 styles at once for a specific palette
-npm run forge -- --mode bg --palette "#7B5FE0,#B89FFF,#E8DDFF" --aspect 9:16 --mood soft
-```
-
-| Style | What it produces |
-|---|---|
-| `gradient-stripes` | Vertical pleated color stripes flowing top-to-bottom |
-| `mesh-flow` | Smooth mesh gradient with directional color flow (Stripe / Linear marketing feel) |
-| `blob-organic` | Overlapping soft 3D pebble shapes drifting across the frame |
-
-Flags:
-- `--bg-style <name>` — one style or comma list, default `all`
-- `--palette <colors>` — comma-separated names or hex (REQUIRED)
-- `--aspect <ratio>` — `9:16` (default), `16:9`, `4:5`, `3:4`, `1:1`
-- `--mood <name>` — `calm` (default), `energetic`, `dramatic`, `soft`
-- `--no-crop` — skip auto-crop, keep square output
-
 ## Scene modes — `--bg` and `--style`
 
 Two orthogonal flags control the scene around every material:
