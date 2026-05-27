@@ -265,4 +265,4 @@ The vibetext aesthetic: each letter is its own material — knit wool next to ch
 
 ## License
 
-MIT
+[MIT](LICENSE) © 2026 Yitong Gao
