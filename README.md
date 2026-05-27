@@ -39,8 +39,8 @@ npm run forge -- --text "xi"
 # your full name × all featured (~$5, needs --confirm because it exceeds the $2 gate)
 npm run forge -- --text "xiangyi26" --max-cost 6 --confirm
 
-# botim-style app icons × featured (~$5)
-npm run forge -- --subjects botim-icons --max-cost 6 --confirm
+# app icons × featured (~$5)
+npm run forge -- --subjects app-icons --max-cost 6 --confirm
 ```
 
 When the run finishes, an HTML contact-sheet is auto-generated and its path is printed — `open` it to browse the result grid.
@@ -87,7 +87,7 @@ All 35 materials, each rendered on the letter `x` for a like-for-like comparison
 
 ### Pattern & Heritage
 
-Middle East-coded materials. Brand-color anchored (Botim cobalt blue threaded through arabesque glass, royal marble, lapis ultramarine) + cultural craft references (Ottoman mosque rose windows, Andalusian palace interiors, Persian illuminated manuscripts, spice market sensory).
+Middle East-coded materials. Cobalt-blue anchored (deep cobalt threaded through arabesque glass, royal marble, lapis ultramarine) + cultural craft references (Ottoman mosque rose windows, Andalusian palace interiors, Persian illuminated manuscripts, spice market sensory).
 
 <table>
   <tr>
@@ -198,7 +198,7 @@ Each subject is one item that gets rendered in every chosen material.
 | Source | Use |
 |---|---|
 | `subjects/starter.yaml` | generic icons (heart, star, bell, gift, lock, bolt, note, cloud) |
-| `subjects/botim-icons.yaml` | app icons (chat, wallet, lock, bell, …) |
+| `subjects/app-icons.yaml` | app icons (chat, wallet, lock, bell, …) |
 | `subjects/alphabet-lower.yaml` | a–z, sans-serif chunky proportions |
 | `subjects/digits.yaml` | 0–9 |
 | `--text "anything"` | ad-hoc: each character becomes a subject on the fly |
