@@ -12,7 +12,7 @@ Batch 3D icon & letter generator — powered by **Gemini 2.5 Flash Image** (nano
 ## What it does
 
 - Generates batches of 3D-rendered icons or letters via Gemini's nano-banana image model
-- **35 curated materials** including a Middle East-coded Pattern & Heritage family (Iznik-style arabesque glass, royal-blue+marble palace, lapis ultramarine, spice market) plus chrome variants, pearl/iridescent, glass/resin, fabric, natural — 27 tagged `featured` for the core vibetext + cultural set
+- **36 curated materials** including a Middle East-coded Pattern & Heritage family (Iznik-style arabesque glass, royal-blue+marble palace, lapis ultramarine, spice market) plus chrome variants, pearl/iridescent, glass/resin, fabric, natural — 28 tagged `featured` for the core vibetext + cultural set
 - All materials share a single cream/white studio backdrop, so outputs **drop straight into Figma and compose cleanly**
 - Built-in cost gate + spend ledger — you don't accidentally burn $50 on a typo
 
@@ -47,7 +47,7 @@ When the run finishes, an HTML contact-sheet is auto-generated and its path is p
 
 ## Material gallery
 
-All 35 materials, each rendered on the letter `x` for a like-for-like comparison (Pattern & Heritage materials shown on a shield silhouette to display ornate detail). ⭐ marks the 27 `featured` materials.
+All 36 materials, each rendered on the letter `x` for a like-for-like comparison (Pattern & Heritage materials shown on a shield silhouette to display ornate detail). ⭐ marks the 28 `featured` materials.
 
 ### Chrome & metal
 
@@ -68,6 +68,7 @@ All 35 materials, each rendered on the letter `x` for a like-for-like comparison
     <td align="center"><img src="examples/chrome-led-knurled.png" width="140"/><br/><sub>⭐ <code>chrome-led-knurled</code></sub></td>
     <td align="center"><img src="examples/chrome-led-brushed.png" width="140"/><br/><sub>⭐ <code>chrome-led-brushed</code></sub></td>
     <td align="center"><img src="examples/chrome-led-screws.png" width="140"/><br/><sub>⭐ <code>chrome-led-screws</code></sub></td>
+    <td align="center"><img src="examples/steel-blue-satin.png" width="140"/><br/><sub>⭐ <code>steel-blue-satin</code></sub></td>
   </tr>
 </table>
 
